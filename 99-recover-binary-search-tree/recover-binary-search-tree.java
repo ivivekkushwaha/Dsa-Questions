@@ -14,7 +14,7 @@
  * }
  */
 class Solution {
-    TreeNode g[] = new TreeNode[4];
+    TreeNode g[] = new TreeNode[3];
     int count = 0;
     TreeNode prev = null;
 
@@ -26,8 +26,8 @@ class Solution {
             g[1].val = temp;
         }else{
             int temp = g[0].val;
-            g[0].val = g[3].val;
-            g[3].val = temp;
+            g[0].val = g[2].val;
+            g[2].val = temp;
         }
 
     }
@@ -42,8 +42,8 @@ class Solution {
                 g[0] = prev;
                 g[1] = root;
             } else {
-                g[2] = prev;
-                g[3] = root;
+                g[2] = root;
+                
             }
         }
             prev = root;
